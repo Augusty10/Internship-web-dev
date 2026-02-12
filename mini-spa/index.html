@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker SPA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+
+<body>
+
+    <header class="navbar">
+  <div class="nav-container">
+
+    <!-- LEFT SIDE (Logo) -->
+    <a href="/" data-link class="logo">
+      <img src="assets/logo.png" alt="Expense Tracker Logo" class="logo-img">
+      <span class="logo-text">ExpenseTracker</span>
+    </a>
+
+    <!-- RIGHT SIDE (Navigation) -->
+    <nav class="nav-links">
+      <a href="/" data-link>Dashboard</a>
+      <a href="/add" data-link>Add Expense</a>
+      <a href="/reports" data-link>Reports</a>
+    </nav>
+
+  </div>
+</header>
+
+  <div id="loader" class="loader hidden">
+    <div class="spinner"></div>
+  </div>
+
+
+  <div class="app-container">
+    <main id="app" class="fade-in">
+      <!-- Dynamic SPA content injects here -->
+    </main>
+  </div>
+
+
+  <footer class="footer">
+    <p>
+      © 2026 Expense Tracker • Built with Vanilla JS • Designed by Dhanraj Sahu
+    </p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+
+
+</body>
+</html>

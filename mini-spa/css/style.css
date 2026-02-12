@@ -1,0 +1,305 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.navbar {
+  backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid #e5e5e7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Main navbar container */
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between; /* pushes logo left & nav right */
+  align-items: center;
+}
+
+/* LOGO  */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1d1d1f;
+}
+
+.logo-img {
+  height: 65px;   /* bigger logo */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: opacity 0.25s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+
+
+.app-container {
+  flex: 1;
+}
+
+main {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow:
+    0 6px 30px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.06),
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.balance {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e5e5e7;
+  font-size: 0.95rem;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+
+
+button {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 980px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Delete Button */
+
+button[data-delete] {
+  background-color: #ff3b30;
+}
+
+button[data-delete]:hover {
+  background-color: #d92c24;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+select {
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #d2d2d7;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0071e3;
+  box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+}
+
+
+
+.loader {
+  text-align: center;
+  padding: 1rem;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #e5e5e7;
+  border-top: 3px solid #0071e3;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+canvas {
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.footer {
+  padding: 2rem 1.5rem;
+  background: #f5f5f7;
+  border-top: 1px solid #e5e5e7;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6e6e73;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  main {
+    margin: 3rem auto;
+  }
+
+  .balance {
+    font-size: 2rem;
+  }
+}
+
+.report-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.empty-state {
+  text-align: center;
+  margin: 2rem 0;
+  color: #6e6e73;
+  font-size: 0.95rem;
+}
