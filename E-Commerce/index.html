@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header class="header">
+  <div class="header-left">
+    <img src="asset/logo.png" alt=" E-Commerce" class="logo">
+    <h1>E-Commerce Dashboard</h1>
+  </div>
+
+  <nav class="nav">
+    <a href="#">Dashboard</a>
+    
+  </nav>
+</header>
+
+<section class="analytics">
+  <div class="card red">Total Titles <span>0</span></div>
+  <div class="card yellow">Avg Price <span>$0</span></div>
+  <div class="card">Top Rated <span>0 ⭐</span></div>
+  <div class="card red">Low Stock <span>0</span></div>
+</section>
+
+<section class="controls">
+  <input type="text" id="searchInput" placeholder="Search Manga...">
+
+  <!-- FIXED SELECT -->
+  <select id="categoryFilter">
+    <option>All Categories</option>
+  </select>
+</section>
+
+<section class="grid">
+  <!-- JS will render products here -->
+</section>
+
+<footer class="footer">
+  <p>© 2026 E-Commerce Dashboard  | Built by Dhanraj</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
