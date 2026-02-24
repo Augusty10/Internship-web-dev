@@ -1,0 +1,8 @@
+
+{
+  "name": "ZenHabit PWA",
+  "description": "A high-performance, offline-first habit tracker with AI-powered coaching, streaks, and advanced analytics.",
+  "requestFramePermissions": [
+    "notifications"
+  ]
+}
